@@ -1,0 +1,91 @@
+#main {
+  text-align: left;
+  justify-items: auto;
+}
+
+.sell {
+  /* padding: 3.75rem 11.75rem 18.75rem 11.75rem; */
+  padding: 2.75rem 11.75rem 6.75rem 11.75rem;
+}
+
+.sell h1 {
+  margin-bottom: 2rem;
+  /* font-size: 1rem; */
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-areas: 'name name price quantity'
+                       'description description description description'
+                       '. . . submit';
+  font-size: inherit;
+}
+
+input {
+  /* min-width: 100%; */
+  /* box-sizing: border-box; */
+}
+
+select {
+  background-color: hsla(0, 0%, 100%, 1);
+  font-size: inherit;
+}
+
+textarea {
+  min-height: 12rem;
+  font-size: inherit;
+}
+
+#name {
+  grid-area: name;
+}
+
+#price {
+  grid-area: price;
+}
+
+#quantity {
+  grid-area: quantity;
+  margin: 0;
+}
+
+#description {
+  grid-area: description;
+  margin: 0 0 1rem 0;
+}
+
+#submit {
+  grid-area: submit;
+  justify-self: end;
+}
+
+@media only screen and (max-width: 1100px) {
+  .sell {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  form {
+    grid-template-areas: 'name name'
+                         'price quantity'
+                         'description description'
+                         '. submit';
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  form {
+    grid-template-areas: 'name'
+                         'price'
+                         'quantity'
+                         'description'
+                         'submit';
+  }
+
+  #submit {
+    justify-self: center;
+  }
+}
